@@ -1,0 +1,47 @@
+{
+    "filters":{
+        "op": "and",
+        "content": [
+            {
+                "op": "=",
+                "content": {
+                    "field": "cases.project.project_id",
+                    "value": "TCGA-BRCA"
+                }
+            },
+            {
+                "op": "=",
+                "content": {
+                    "field": "analysis.workflow_type",
+                    "value": "STAR - Counts"
+                }
+            },
+            {
+                "op": "=",
+                "content": {
+                    "field": "access",
+                    "value": "open"
+                }
+            },
+            {
+                "op": "in",
+                "content": {
+                    "field": "cases.samples.sample_type",
+                    "value":["metastatic","primary tumor"]
+                }
+            },
+
+            {
+                "op": "in",
+                "content": {
+                    "field": "cases.demographic.gender",
+                    "value":"female"
+                }
+
+            },
+        ]
+    },
+    "fields":"file_id,file_name,cases.case_id,cases.diagnoses.primary_diagnosis,cases.diagnoses.ajcc_pathologic_stage,cases.diagnoses.ajcc_pathologic_n,cases.diagnoses.ajcc_pathologic_m,cases.diagnoses.ajcc_pathologic_t,cases.diagnoses.tumor_stage,cases.diagnoses.age_at_diagnosis,cases.diagnoses.morphology, cases.demographic.gender,cases.demographic.age_at_index,cases.demographic.race,cases.diagnoses.treatments.treatment_or_therapy",
+    "size": 1000
+
+}
