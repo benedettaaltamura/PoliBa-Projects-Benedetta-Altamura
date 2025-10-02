@@ -11,6 +11,7 @@ from sklearn.metrics import roc_curve, auc
 from sklearn.preprocessing import label_binarize
 
 #test2
+#local
 def model_training_ann(train_df_pca, test_df_pca, classes):
 
     train_df_pca.repartition(200)
