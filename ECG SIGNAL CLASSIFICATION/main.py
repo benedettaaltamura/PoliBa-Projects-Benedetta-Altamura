@@ -7,7 +7,7 @@ import seaborn as sns
 import time
 from model_training_rf import model_training_rf
 from model_training_ann2 import model_training_ann
-#test
+#test2
 start_time = time.time()
 
 if __name__ == '__main__':
