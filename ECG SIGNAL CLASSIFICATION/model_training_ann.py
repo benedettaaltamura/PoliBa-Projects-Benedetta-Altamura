@@ -17,7 +17,7 @@ def model_training_ann(train_df_pca, test_df_pca, classes):
     train_df_pca.persist(StorageLevel.MEMORY_AND_DISK)
     test_df_pca.persist(StorageLevel.MEMORY_AND_DISK)
 
-    # Definizione layers per il modello di rete neurale
+    ## Definizione layers per il modello di rete neurale
     input_layer_size = train_df_pca.select("pcaFeatures").first()[0].size
     layers1 = [input_layer_size, 70, 20, len(classes)]
     layers2 = [input_layer_size, 10, 5, len(classes)]

@@ -26,7 +26,7 @@ if __name__ == '__main__':
     train_df = spark.read.csv(train_path, header=False, inferSchema=True)
     test_df = spark.read.csv(test_path, header=False, inferSchema=True)
 
-    # Controllo per valori mancanti
+    ## Controllo per valori mancanti
     missing_values_train = train_df.select(
         [spark_sum(col(c).isNull().cast("int")).alias(c) for c in train_df.columns]
     ).collect()
