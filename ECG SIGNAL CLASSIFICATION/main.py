@@ -67,7 +67,7 @@ if __name__ == '__main__':
                3: 'Fusione di battito ventricolare e normale',
                4: 'Battito non classificabile'}
 
-    ## Esplorazione Dataset
+    ### Esplorazione Dataset
     train_pd = train_df.toPandas()
     test_pd = test_df.toPandas()
 
