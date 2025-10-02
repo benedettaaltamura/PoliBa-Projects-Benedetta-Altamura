@@ -20,7 +20,7 @@ if __name__ == '__main__':
         .config("spark.sql.shuffle.partitions", "200") \
         .getOrCreate()
 
-    # Importazione file csv e creazione Dataframe Spark
+    ## Importazione file csv e creazione Dataframe Spark
     train_path = "/home/serena/BigData/Spark/pythonProject1/Dataset/mitbih_train.csv"
     test_path = "/home/serena/BigData/Spark/pythonProject1/Dataset/mitbih_test.csv"
     train_df = spark.read.csv(train_path, header=False, inferSchema=True)
